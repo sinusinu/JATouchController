@@ -1,6 +1,7 @@
 # Touch controller for jubeat analyser
 ### Play jubeat analyser on any touch-capable Windows devices!
-![screenshot](https://raw.githubusercontent.com/sinusinu/JATouchController/master/sshot.png)
+![screenshot](https://raw.githubusercontent.com/sinusinu/JATouchController/master/sshot.png)<br/>
+[Download Release Build](https://github.com/sinusinu/JATouchController/releases/download/1.0/JATouchController.zip)
 ## Overview
 
 Touch controller for jubeat analyser is a standalone app that converts touchscreen input into corresponding key input for jubeat analyser.
