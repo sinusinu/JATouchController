@@ -1,5 +1,4 @@
 # Touch controller for jubeat analyser
-### Play jubeat analyser on any touch-capable Windows devices!
 ![screenshot](https://raw.githubusercontent.com/sinusinu/JATouchController/master/sshot.png)<br/>
 [Download Release Build](https://github.com/sinusinu/JATouchController/releases/download/1.0/JATouchController.zip)
 ## Overview
