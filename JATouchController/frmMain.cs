@@ -35,8 +35,10 @@ namespace JATouchController
         private const int WM_POINTERACTIVATE = 0x024B;
         private const int PA_NOACTIVATE = MA_NOACTIVATE;
 
-        private const uint KEYEVENTF_KEYUP = 0x0002;
-        private const uint KEYEVENTF_EXTENDEDKEY = 0x0001;
+        private const int WM_GESTURE = 0x0119;
+
+        private const int KEYEVENTF_KEYUP = 0x0002;
+        private const int KEYEVENTF_EXTENDEDKEY = 0x0001;
 
         private const int WM_SYSCOMMAND = 0x0112;
         private const int SC_MOVE = 0xF010;
@@ -385,6 +387,12 @@ namespace JATouchController
                     int command = m.WParam.ToInt32() & 0xfff0;
                     if (command == SC_MOVE) return;
                 }
+            }
+
+            else if (m.Msg == WM_GESTURE)
+            {
+                m.Result = (IntPtr)0;
+                return;
             }
 
             base.WndProc(ref m);
