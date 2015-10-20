@@ -18,8 +18,11 @@ Tested and confirmed working on my 8" Windows 10 tablet, but I cannot guarantee 
 4. Tap 'Search for jubeat analyser' (if the title of the jubeat analyser is not a 'music select', then change the text in textbox to the current title)
 5. Now you can play jubeat analyser with touch!
 
-You can send ESC key(to stop playing current song) by tapping close button twice quickly.<br/>
-Tap close button 3 times quickly to close this app.
+When you Tap the Close button on the top-right of the window, the grid will become red.<br/>
+When the grid is red, Tapping the Close button will send ESC key(to stop playing current song) to jubeat analyser. This will make the grid invisible.<br/>
+When the grid is invisible, Tapping the Close button will shut down the touch controller.
+
+(Close button: 1x=Nothing, 2x=ESC, 3x=Close)
 
 ## License
 

@@ -120,7 +120,7 @@ namespace JATouchController
         bool exitFlag = true;
         bool escFlag = true;
 
-        Pen sepPen = new Pen(Brushes.White);
+        Pen sepPen;
 
         Rectangle clientRect;
 
@@ -131,6 +131,7 @@ namespace JATouchController
             // Uncomment this function to enable mouse interaction (for test purpose)
             //EnableMouseInPointer(true);
 
+            sepPen = new Pen(Brushes.White);
             sepPen.Width = 2f;
         }
 
@@ -407,22 +408,30 @@ namespace JATouchController
 
         private void tmrExitFlagRemover_Tick(object sender, EventArgs e)
         {
+            sepPen.Color = Color.White;
+            this.Invalidate();
             exitFlag = false;
             escFlag = false;
+            tmrExitFlagRemover.Stop();
         }
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (!exitFlag)
             {
+                sepPen.Color = Color.Red;
+                this.Invalidate();
                 e.Cancel = true;
                 exitFlag = true;
+                tmrExitFlagRemover.Stop();
                 tmrExitFlagRemover.Start();
             }
             else
             {
                 if (!escFlag)
                 {
+                    sepPen.Color = Color.Black;
+                    this.Invalidate();
                     if (isAnalyserFound)
                     {
                         SetForegroundWindow(ptrAnalyser);
@@ -434,6 +443,10 @@ namespace JATouchController
                     escFlag = true;
                     tmrExitFlagRemover.Stop();
                     tmrExitFlagRemover.Start();
+                }
+                else
+                {
+
                 }
             }
         }
